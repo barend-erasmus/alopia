@@ -1,0 +1,34 @@
+{
+  "name": "alopia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build & tsc",
+    "debug": "npm run build & node --inspect ./dist/app.js --dev",
+    "lint": "tslint ./src/**/*.ts --fix --exclude ./src/**/*.d.ts",
+    "start": "npm run build & node ./dist/app.js --dev",
+    "test": "npm run build & mocha --timeout 30000 ./dist/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barend-erasmus/alopia.git"
+  },
+  "author": "Barend Erasmus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barend-erasmus/alopia/issues"
+  },
+  "homepage": "https://github.com/barend-erasmus/alopia#readme",
+  "dependencies": {
+    "chalk": "^2.4.0",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^9.6.5",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "run-sequence": "^2.2.1"
+  }
+}
